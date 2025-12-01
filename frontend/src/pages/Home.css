@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+input {
+  height: 25px;
+  width: 33%;
+  padding: 10px;
+  margin: 20px auto 10px auto;
+  border-radius: 6px;
+  display: block;
+  position: static;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+button {
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px auto;
+  display: block;
+  position: static;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+.header {
+  margin: auto -16px;
+  padding: 16px 32px;
+  font-size: 45px;
+  color: white;
+}
+
+.Submit {
+  transform: scale(1.2);
+  margin-top: 30px;
+}
+
+.recipe-box {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.03);
+  color: white;
+  text-align: left;
+  font-size: 15px;
+}
+
+
+
+
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  width: 60%;
+  padding: 8px;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.optional-inputs {
+  display: flex;
+  gap: 30px;
+}
+
+.optional-inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.optional-inputs label {
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: white;
+}
+
+.optional-inputs input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  width: 160px;
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+  width: 70%;
+  height: 70%;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow-y: auto;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  margin-top: 20px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close-btn,
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.close-btn {
+  right: 10px;
+}
+
+.copy-btn {
+  right: 70px;
+}
+
+.ingredient-list {
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.ingredient-list h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #ffffffcc;
+}
+
+.ingredient-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.ingredient-list li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: background 0.2s ease;
+  position: relative;
+  padding-left: 28px;
+}
+
+
+
+.ingredient-list li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ingredient-list ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ingredient-list ul::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.button-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.button-row button {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.button-row button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.button-row button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

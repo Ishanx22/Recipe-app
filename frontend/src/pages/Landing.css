@@ -1,0 +1,248 @@
+
+
+
+
+.landing-container {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  padding-bottom: 8rem;
+}
+
+
+.image-text-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+
+/* QUICK + ROTATING TEXT (SIDE BY SIDE) */
+.quick-text {
+  display: flex;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+.fixed-text {
+  display: inline-block;
+}
+
+.rotating-wrapper {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #7748ef;
+  border-radius: 8px;
+}
+
+.rotating-bg {
+  color: white;
+}
+
+
+
+/* HERO SECTION ------------------------- */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  height: 450px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+  margin-top: -20px;
+  padding: 1rem 0;           /* NEW: consistent vertical spacing */
+  display: flex;             /* NEW */
+  flex-direction: column;    /* NEW */
+  align-items: flex-start;   /* NEW: left-align everything */
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 20px;
+  color: #d0d0d0;
+}
+
+
+
+.hero-right {
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+.hero-image {
+  width: 750px;
+  height: 450px;
+  /* margin-left: -20px; */
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 0 12px rgba(255, 255, 255, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* HOW SECTION --------------------------- */
+.how-section {
+  color: #ffffff;
+}
+
+.stext {
+  color: #ffffff;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.how-section li {
+  color: #000;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.how-section li span {
+  width: 40px;
+  height: 40px;
+  background-color: #ff6a00;
+  color: #000;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+
+.how-section li h3 {
+  color: #000;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.how-section li p {
+  color: black;
+}
+
+
+
+/* GLOW BUTTON ------------------------- */
+
+
+.glow-button {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+.glow-button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+    box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+
+}
+
+.glow-button:active {
+  transform: scale(0.95);
+}
+
+/* STEP CARDS --------------------------- */
+.steps-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.step-card span {
+  display: inline-block;
+  background-color: #00e5ff;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}

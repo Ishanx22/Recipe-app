@@ -1,0 +1,94 @@
+/* About.css */
+
+/* Set default text color to white for the entire page */
+.about-page, .about-page * {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Aurora section full width */
+.aurora-section {
+  position: relative;
+  width: 100%;
+}
+
+/* Headings */
+.about-page h1, .about-page h2, .about-page h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.about-page p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Step cards row */
+.steps-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Spotlight cards customization */
+.custom-spotlight-card {
+  background: rgba(255, 255, 255, 0.05); /* subtle glass effect */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 220px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-spotlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Step card content */
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-card span {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Text centered sections */
+.about-page div[style*="textAlign: center"] {
+  text-align: center;
+}
+
+/* Frosted glass containers */
+.about-page div[style*="backdropFilter"] {
+  color: white;
+}
+
+/* Make links white too, if any */
+.about-page a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .steps-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-spotlight-card {
+    width: 80%;
+  }
+}
