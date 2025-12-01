@@ -52,8 +52,10 @@ export default function Home() {
     prompt += ` Try to include at least ${protein}g of protein.`;
   }
 
+
   try {
-  const response = await fetch("/api/chatgpt", {
+  const API_BASE = import.meta.env.VITE_API_BASE || "/api";
+  const response = await fetch(`${API_BASE}/chatgpt`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt }),

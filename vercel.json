@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "version": 2,
+=======
+  "version": 3,
+>>>>>>> 1d0b0fb (Add react-router-dom to frontend dependencies)
   "builds": [
     {
       "src": "frontend/package.json",
